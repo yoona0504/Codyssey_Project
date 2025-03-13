@@ -9,7 +9,7 @@ def main():
             logs = file.readlines()
 
         # 헤더 제거
-        # logs = logs[1:]
+        logs = logs[1:]
 
         # 원본 로그 순서대로 출력
         print('\n[전체 로그 목록 (원본 순서)]')
