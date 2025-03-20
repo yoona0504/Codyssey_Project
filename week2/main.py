@@ -1,5 +1,5 @@
 def read_csv_file(file_path):
-    """CSV 파일을 읽고 인화성이 높은 물질을 리스트로 변환"""
+    """CSV 파일을 읽고 인화성이 높은 물질을 리스트로 변환하는 함수"""
     inventory_list = []  # 데이터를 저장할 리스트
 
     try:
