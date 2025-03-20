@@ -3,18 +3,18 @@ def read_csv_file(file_path):
     inventory_list = []  # 데이터를 저장할 리스트
 
     try:
-        # UTF-8 인코딩으로 파일을 읽기 모드로 열기
+        # UTF-8 인코딩으로 파일을 읽기 모드(r)로 열기
         with open(file_path, 'r', encoding='utf-8') as file:
-            header = file.readline().strip().split(',')  # 첫 번째 줄(헤더)을 읽고 버림
+            header = file.readline().strip().split(',')  # 첫 번째 줄 읽기, 공백 제거, ,로 데이터 분할하깅
 
-            for line in file:
-                parts = line.strip().split(',')  # 쉼표(,)를 기준으로 문자열을 분할
-                if len(parts) < 5:  
-                    continue  # 데이터가 부족한 경우 무시
+            for line in file: # 파일 끝날 때까지 반복함(for)
+                parts = line.strip().split(',')  # ,로 parts 리스트에 저장
+                if len(parts) < 5:  # 리스트 길이가 5보다 작으면 잘못된 데이터임 // 무시함
+                    continue  
 
                 try:
-                    name = parts[0].strip()  # 첫 번째 컬럼: 물질 이름
-                    flammability = float(parts[4].strip())  # 다섯 번째 컬럼: 인화성 지수
+                    name = parts[0].strip()  # 첫 번째 : 물질 이름
+                    flammability = float(parts[4].strip())  # 다섯 번째 : 인화성 지수
                     inventory_list.append((name, flammability))  # 리스트에 추가
                 except ValueError:
                     continue  # 숫자로 변환할 수 없는 경우 무시
