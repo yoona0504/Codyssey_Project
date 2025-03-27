@@ -1,0 +1,2 @@
+2025-03-27 10:57:15, Internal Temp: 29.84 C, External Temp: 1.12 C, Internal Humidity: 51.32 %, External Illuminance: 532.07 W/m2, Internal CO2: 0.0542 %, Internal O2: 6.06 %
+2025-03-27 11:00:42, Internal Temp: 20.99 C, External Temp: 4.25 C, Internal Humidity: 58.93 %, External Illuminance: 554.42 W/m2, Internal CO2: 0.0536 %, Internal O2: 4.49 %
