@@ -39,10 +39,6 @@ class MissionComputer:
         self.ds = DummySensor()
 
     def get_sensor_data(self):
-        """
-        센서 데이터를 5초마다 수집하여 출력하고,
-        5분마다 평균값을 출력하는 메서드.
-        """
         start_time = time.time()
         print('Ctrl+C 를 눌러 출력을 멈추세요.')
 
