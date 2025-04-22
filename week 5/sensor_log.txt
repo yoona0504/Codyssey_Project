@@ -1,0 +1,2 @@
+2025-04-22 11:10:11, Internal Temp: 23.58 C, External Temp: 20.14 C, Internal Humidity: 53.25 %, External Illuminance: 570.74 W/m2, Internal CO2: 0.0656 %, Internal O2: 5.03 %
+2025-04-22 11:10:16, Internal Temp: 24.91 C, External Temp: 10.98 C, Internal Humidity: 57.86 %, External Illuminance: 620.15 W/m2, Internal CO2: 0.0409 %, Internal O2: 4.97 %
