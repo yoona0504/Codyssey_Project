@@ -1,0 +1,49 @@
+[개발/실행 환경]
+- Python 3.x
+- FastAPI, uvicorn 사용
+- 앱 코드는 표준 라이브러리 + FastAPI만 사용
+- DB 금지, CSV 파일로 저장/조회
+
+1) 프로젝트 폴더 생성 후 이동
+   mkdir fastapi_todo
+   cd fastapi_todo
+
+2) 가상환경 생성 및 활성화
+   (Windows)
+   python -m venv venv
+   venv\Scripts\activate
+
+   (macOS/Linux)
+   python3 -m venv venv
+   source venv/bin/activate
+
+3) FastAPI + uvicorn 설치
+   pip install fastapi uvicorn
+
+4) 파일 준비
+   - todo.py  (FastAPI app + APIRouter + CSV 저장 로직)
+
+5) 서버 실행 (main.py 없이 todo.py만 사용)
+   uvicorn todo:app --reload
+
+   실행 후 기본 주소:
+   http://127.0.0.1:8000
+
+6) curl로 동작 확인
+
+   6-1) todo 추가 (POST)
+   curl -X POST "http://127.0.0.1:8000/todo/add" \
+        -H "Content-Type: application/json" \
+        -d "{\"title\":\"첫 번째 할 일\",\"description\":\"FastAPI 공부\"}"
+
+   6-2) 빈 Dict 입력 테스트 (에러)
+   curl -X POST "http://127.0.0.1:8000/todo/add" \
+        -H "Content-Type: application/json" \
+        -d "{}"
+
+   6-3) todo 목록 조회 (GET)
+   curl -X GET "http://127.0.0.1:8000/todo/list"
+
+7) CSV 파일 안내
+   - todo.csv 파일이 자동 생성됨
+   - 서버를 껐다 켜도 CSV에 저장된 todo가 유지됨
